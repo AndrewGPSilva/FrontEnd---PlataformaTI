@@ -1,30 +1,22 @@
 <template>
-    <div>
-        <h1>Olá</h1>
-        <ul>
-            <li v-for="aula in aulas" :key="aula.id">{{ aula.title }}</li>
-        </ul>
+    <div class="flex">
+        <div class="w-1/5">
+            <Navbar />
+        </div>
+        <section class="bg-black text-white flex flex-col justify-center items-center p-5 w-4/5">
+            <Aulas />
+        </section>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
-
+import Aulas from '@!/HomeAulas/Aulas.vue'
+import Navbar from '@!/Global/Navbar.vue'
 export default {
     name: "HomeAulas",
-    created() {
-        axios.get("http://localhost:8000/api/aulas")
-            .then((response) => {
-                this.aulas = response.data;
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-    },
-    data() {
-        return {
-            aulas: []
-        }
+    components: {
+        Navbar,
+        Aulas,
     }
 }
 </script>

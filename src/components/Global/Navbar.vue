@@ -1,7 +1,7 @@
 <template>
     <section class="bg-black text-white h-screen p-5" id="navbar">
         <div class="flex justify-center">
-            <a href="/"><img class="w-44" src="@@/logoV2.png" alt="Logo da Plataforma"></a>
+            <img class="w-44" src="@@/logoV2.png" alt="Logo da Plataforma">
         </div>
         <Line />
         <div>
