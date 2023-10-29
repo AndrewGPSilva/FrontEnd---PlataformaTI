@@ -1,28 +1,41 @@
 <template>
-    <section class="flex">
-        <header class="w-1/5">
-            <Navbar />
-        </header>
-        <div class="flex flex-col w-4/5">
-            <main class="bg-black text-white flex flex-col justify-center items-center h-4/4 p-4 pt-11">
-                <h1 class="text-orange-500 text-2xl">Aulas Disponíveis:</h1>
-                <div v-for="aula in aulas" :key="aula.id" class="flex p-3 w-4/5">
-                    <div class="flex items-center">
-                        <img :src="aula.image" alt="Thumbnail do vídeo" class="h-3/4 mr-5">
-                        <div class="flex flex-col">
-                            <p class="text-blue-500">{{ aula.title }}</p>
-                            <p>{{ limitarDescricao(aula.description, 100) }}</p>
-                            <Line />
-                        </div>
-                    </div>
+    <section class="flex flex-col">
+        <div>
+            <h1 class="text-orange-500 text-center mb-7 underline text-2xl">
+                Aulas Dísponiveis:
+            </h1>
+        </div>
+        <div v-for="aula in aulas" :key="aula.id" class="flex">
+            <div class="mr-3 items-center">
+                <a href="aula.link">
+                    <img class=" h-3/4 border border-yellow-500" :src="aula.image" alt="Imagem do vídeo">
+                </a>
+            </div>
+            <div class="flex flex-col mt-2">
+                <a :href="aula.link">
+                    <h2 class="text-blue-500">
+                        {{ aula.title }}
+                    </h2>
+                </a>
+                <p class="text-gray-300 mb-1">
+                    {{ limitarDescricao(aula.description, 100) }}
+                </p>
+                <div class="flex justify-between">
+                    <p class="bg-yellow-500 p-1  rounded-lg text-black text-center items-center w-40 font-bold">
+                        Categoria: {{ aula.category }}
+                    </p>
+                    <button class="bg-red-800 p-1 w-40 font-bold rounded-lg text-white" @click="excluirAula(id)">
+                        Excluir Aula
+                    </button>
                 </div>
-            </main>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
 import axios from 'axios';
+import Line from '@!/Global/Line.vue'
 
 export default {
     name: "HomeAulas",
@@ -41,14 +54,26 @@ export default {
         }
     },
     methods: {
+        excluirAula(id) {
+            if (confirm("Tem certeza de que deseja excluir esta aula?")) {
+                axios.post(`http://localhost:8000/api/aulas/${id}`, { _method: 'DELETE' })
+                    .then(response => {
+                        console.log(response.data.message);
+                        this.aulas = this.aulas.filter(aula => aula.id !== id);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+        },
         limitarDescricao(descricao, limite) {
             if (descricao.length > limite) {
                 return descricao.substring(0, limite) + "...";
             } else {
                 return descricao;
             }
-
         }
-    }
+    },
+    components: { Line }
 }
 </script>

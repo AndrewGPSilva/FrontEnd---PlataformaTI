@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from "../components/Global/Navbar.vue"
+import Formulario from "../components/Home/Formulario.vue";
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import Navbar from "../components/Global/Navbar.vue"
       <Navbar />
     </div>
     <section class="bg-black text-white flex flex-col justify-center items-center p-5 w-4/5">
-      <h1>Home Principal</h1>
+      <Formulario />
     </section>
   </div>
 </template>

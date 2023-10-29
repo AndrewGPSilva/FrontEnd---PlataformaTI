@@ -1,6 +1,6 @@
 <template>
     <section>
-        <form>
+        <form @submit.prevent="submit">
             <div>
                 <label for="title">Título</label>
                 <input type="text" name="title" v-model="title" required placeholder="Digite o título da aula...">
@@ -45,7 +45,7 @@ export default {
         }
     },
     methods: {
-        cadastrar() {
+        submit() {
             const dados = {
                 title: this.title,
                 description: this.description,
@@ -61,7 +61,7 @@ export default {
 
             axios.post("http://127.0.0.1:8000/api/aulas", dados)
                 .then((response) => {
-                    console.log("Aula cadastrada com sucesso!")
+                    console.log("Aula cadastrada com sucesso!", response)
                 })
                 .catch((error) => {
                     console.log("Ocorreu um erro", error)
