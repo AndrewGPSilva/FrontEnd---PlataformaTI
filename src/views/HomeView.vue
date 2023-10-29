@@ -3,8 +3,12 @@ import Navbar from "../components/Global/Navbar.vue"
 </script>
 
 <template>
-  <Navbar />
-  <main>
-    <h1>Olá</h1>
-  </main>
+  <div class="flex">
+    <div class="w-1/5">
+      <Navbar />
+    </div>
+    <section class="bg-black text-white flex flex-col justify-center items-center p-5 w-4/5">
+      <h1>Home Principal</h1>
+    </section>
+  </div>
 </template>
