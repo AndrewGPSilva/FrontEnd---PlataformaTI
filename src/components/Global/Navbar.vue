@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-black text-white h-screen p-5" id="navbar">
+    <section class="bg-black text-white h-screen p-5 w-1/5 fixed" id="navbar">
         <div class="flex justify-center">
             <router-link to="/"><img class="w-44" src="@@/logoV2.png" alt="Logo da Plataforma"></router-link>
             
