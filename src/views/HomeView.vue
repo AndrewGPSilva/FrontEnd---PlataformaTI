@@ -1,5 +1,6 @@
 <script setup>
-import Navbar from "../components/Global/Navbar.vue"
+import Navbar from "@!/Global/Navbar.vue"
+import Banner from "@!/Create/Banner.vue"
 </script>
 
 <template>
@@ -8,8 +9,8 @@ import Navbar from "../components/Global/Navbar.vue"
       <Navbar />
     </div>
     <section class="bg-black text-white flex flex-col justify-center items-center p-5 w-4/5">
-      <h1>Home Main</h1>
-      <router-link to="/aulas/create" class="p-2 bg-orange-600 text-blue-900">
+      <Banner />
+      <router-link to="/aulas/create" class="p-3 mt-4 bg-blue-500 rounded-2xl font-bold text-black">
         Registrar uma Aula
       </router-link>
     </section>

@@ -8,7 +8,7 @@
         <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
             <div class="flex w-11/12">
                 <div
-                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`" class="mr-2">
+                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`" class="mr-2 cursor-pointer">
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
@@ -22,10 +22,10 @@
                     </p>
                     <div class="flex justify-between">
                         <p
-                            class="bg-yellow-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
+                            class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
                             Categoria: {{ aula.category }}
                         </p>
-                        <button class="bg-red-800 p-1 w-40 font-bold rounded-lg text-white" @click="excluirAula(aula.id)">
+                        <button class="bg-red-600 p-1 w-40 font-bold rounded-lg text-black" @click="excluirAula(aula.id)">
                             Excluir Aula
                         </button>
                     </div>
@@ -80,7 +80,3 @@ export default {
     components: { Line }
 }
 </script>
-
-<style scoped>
-main {}
-</style>

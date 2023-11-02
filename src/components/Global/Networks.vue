@@ -1,8 +1,8 @@
 <template>
-    <section class="mt-8">
+    <section class="mt-4">
         <ul class="flex flex-col">
             <h1 class="text-orange-500 font-bold">Redes Sociais</h1>
-            <div class="flex justify-around mt-3 mb-3">
+            <div class="flex justify-around mt-4 mb-3">
                 <li><a href="https://www.youtube.com/channel/UC7L-jcONEz0AG56nfSQiXvA" target="_blank"><i class="pi pi-youtube" style="font-size: 2.5rem; color: rgb(77, 77, 77)"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/andrewgpsilva/" target="_blank"><i class="pi pi-linkedin" style="font-size: 2.5rem; color: rgb(77, 77, 77)"></i></a></li>
                 <li><a href="https://www.facebook.com/Andrew13G" target="_blank"><i class="pi pi-facebook" style="font-size: 2.5rem; color: rgb(77, 77, 77)"></i></a></li>
