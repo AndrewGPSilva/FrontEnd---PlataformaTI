@@ -1,20 +1,21 @@
 <template>
-    <section class="bg-black text-white h-screen p-5 w-1/5 fixed" id="navbar">
-        <div class="flex justify-center">
+    <section class="bg-black text-white h-screen p-5 w-1/5 fixed items-center" id="navbar">
+        <div class="flex justify-center mt-3">
             <router-link to="/"><img class="w-44" src="@@/logoV2.png" alt="Logo da Plataforma"></router-link>
-            
         </div>
         <Line />
         <div>
             <ul class="mt-8">
-                <h1 class="text-orange-500 font-bold">Conteúdos Disponíveis</h1>
+                <h1 class="text-orange-500 text-center font-bold">Conteúdos Disponíveis</h1>
                 <router-link to="/aulas">
-                    <li class="mt-4 text-2xl text-gray-400">Java</li>
-                    <li class="text-2xl text-gray-400">PHP</li>
-                    <li class="text-2xl text-gray-400">Spring</li>
-                    <li class="text-2xl text-gray-400">Vue Js</li>
-                    <li class="text-2xl text-gray-400">Laravel</li>
-                    <li class="text-2xl text-gray-400">Python</li>
+                    <div class="flex flex-wrap p-4">
+                        <img class="w-16 h-16" src="https://i.ibb.co/drrxzN9/laravel.png" alt="Logo do Laravel">
+                        <img class="w-16 h-16" src="https://i.ibb.co/Jz5XpmW/python.png" alt="Logo do Python">
+                        <img class="w-16 h-16" src="https://i.ibb.co/HXq4tBM/vue.png" alt="Logo do Vue JS">
+                        <img class="w-16 h-16" src="https://i.ibb.co/f27wdz5/spring.png" alt="Logo do Spring">
+                        <img class="w-16 h-16" src="https://i.ibb.co/q0WvKG3/csharp.png" alt="Logo do Csharp">
+                        <img class="w-16 h-16" src="https://i.ibb.co/Yht90fY/tailwind.png" alt="Logo do Tailwind CSS">
+                    </div>
                 </router-link>
             </ul>
         </div>
