@@ -22,7 +22,8 @@
                         {{ limitarDescricao(aula.description, 100) }}
                     </p>
                     <div class="flex justify-between">
-                        <p class="bg-yellow-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
+                        <p
+                            class="bg-yellow-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
                             Categoria: {{ aula.category }}
                         </p>
                         <button class="bg-red-800 p-1 w-40 font-bold rounded-lg text-white" @click="excluirAula(aula.id)">
