@@ -7,19 +7,18 @@
         </div>
         <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
             <div class="flex w-11/12">
-                <div class="mr-3 items-center">
-                    <a href="aula.link">
-                        <img class="h-28 w-52 border border-yellow-200" :src="aula.image" alt="Imagem do vídeo">
-                    </a>
+                <div
+                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`" class="mr-2">
+                    <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
-                    <a :href="aula.link">
+                    <router-link :to="'/aulas/' + aula.id">
                         <h2 class="text-blue-500">
                             {{ aula.title }}
                         </h2>
-                    </a>
+                    </router-link>
                     <p class="text-gray-300 mb-1 min-w-full">
-                        {{ limitarDescricao(aula.description, 100) }}
+                        {{ limitarDescricao(aula.description, 82) }}
                     </p>
                     <div class="flex justify-between">
                         <p
@@ -81,3 +80,7 @@ export default {
     components: { Line }
 }
 </script>
+
+<style scoped>
+main {}
+</style>
