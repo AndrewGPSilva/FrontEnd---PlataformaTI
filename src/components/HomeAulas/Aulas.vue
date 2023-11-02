@@ -1,7 +1,7 @@
 <template>
-    <section class="flex flex-col p-6">
+    <section class="flex flex-col py-8 pl-14">
         <div>
-            <h1 class="text-orange-500 text-center mb-7 underline text-2xl">
+            <h1 class="text-orange-500 text-center mb-1 underline text-2xl">
                 Aulas Dísponiveis:
             </h1>
         </div>
@@ -12,11 +12,11 @@
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
-                    <router-link :to="'/aulas/' + aula.id">
+                    <a :href="aula.link" target="_blank">
                         <h2 class="text-blue-500">
                             {{ aula.title }}
                         </h2>
-                    </router-link>
+                    </a>
                     <p class="text-gray-300 mb-1 min-w-full">
                         {{ limitarDescricao(aula.description, 82) }}
                     </p>
