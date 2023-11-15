@@ -20,11 +20,14 @@
                     <p class="text-gray-300 mb-1 min-w-full">
                         {{ limitarDescricao(aula.description, 82) }}
                     </p>
-                    <div class="flex justify-end">
+                    <div class="flex justify-between">
                         <p
                             class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
                             Categoria: {{ aula.category }}
                         </p>
+                        <button id="button-delete" class="bg-red-600 p-1 w-40 font-bold rounded-lg text-black" @click="excluirAula(aula.id)">
+                            Excluir Aula
+                        </button>
                     </div>
                 </div>
             </div>

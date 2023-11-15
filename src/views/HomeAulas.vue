@@ -4,7 +4,7 @@
             <Navbar />
         </div>
         <section class="text-white flex flex-col justify-center items-center w-4/5 bg-black">
-            <Aulas />
+            <Aulas titulo="Aulas Disponiveis" />
         </section>
     </div>
 </template>
