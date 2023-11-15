@@ -19,7 +19,10 @@ const router = createRouter({
     {
       path: '/aulas/admin',
       name: 'admin',
-      component: Admin
+      component: Admin,
+      meta: {
+        auth: true
+      }
     }
   ]
 })
