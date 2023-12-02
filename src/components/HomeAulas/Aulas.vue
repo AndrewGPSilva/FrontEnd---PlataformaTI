@@ -8,7 +8,7 @@
         <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
             <div class="flex w-11/12">
                 <div
-                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`" class="mr-2 cursor-pointer">
+                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 10%;`" class="mr-2 cursor-pointer">
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">

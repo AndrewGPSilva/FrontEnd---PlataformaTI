@@ -7,8 +7,8 @@
         </div>
         <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
             <div class="flex w-11/12">
-                <div
-                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`" class="mr-2 cursor-pointer">
+                <div :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 30%;`"
+                    class="mr-2 cursor-pointer">
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
@@ -25,7 +25,8 @@
                             class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
                             Categoria: {{ aula.category }}
                         </p>
-                        <button id="button-delete" class="bg-red-600 p-1 w-40 font-bold rounded-lg text-black" @click="excluirAula(aula.id)">
+                        <button id="button-delete" class="bg-red-600 p-1 w-40 font-bold rounded-lg text-black"
+                            @click="excluirAula(aula.id)">
                             Excluir Aula
                         </button>
                     </div>
@@ -86,8 +87,8 @@ export default {
 </script>
 
 <style scoped>
-    #button-delete:hover {
-        background-color: red;
-        color: white;
-    }
+#button-delete:hover {
+    background-color: red;
+    color: white;
+}
 </style>

@@ -8,12 +8,12 @@
             <ul class="mt-8">
                 <h1 class="text-orange-500 text-center font-bold">Conteúdos Disponíveis</h1>
                 <router-link to="/aulas">
-                    <div class="flex flex-wrap p-4">
+                    <div id="icons" class="flex flex-wrap p-4">
                         <img class="w-16 h-16" src="https://i.ibb.co/drrxzN9/laravel.png" alt="Logo do Laravel">
                         <img class="w-16 h-16" src="https://i.ibb.co/Jz5XpmW/python.png" alt="Logo do Python">
                         <img class="w-16 h-16" src="https://i.ibb.co/HXq4tBM/vue.png" alt="Logo do Vue JS">
                         <img class="w-16 h-16" src="https://i.ibb.co/f27wdz5/spring.png" alt="Logo do Spring">
-                        <img class="w-16 h-16" src="https://i.ibb.co/q0WvKG3/csharp.png" alt="Logo do Csharp">
+                        <img class="w-16 h-16" src="https://i.ibb.co/RpmyqN4/go.png" alt="Logo do Csharp">
                         <img class="w-16 h-16" src="https://i.ibb.co/Yht90fY/tailwind.png" alt="Logo do Tailwind CSS">
                     </div>
                 </router-link>
@@ -41,5 +41,10 @@ export default {
 #navbar {
     border-right: 3px solid #333;
     height: 100%;
+}
+
+#icons img:hover {
+    background-color: #333;
+    border-radius: 50%;
 }
 </style>
