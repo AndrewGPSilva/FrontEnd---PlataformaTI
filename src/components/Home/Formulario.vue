@@ -1,5 +1,5 @@
 <template>
-    <section class="w-4/5 h-5/5 mt-3">
+    <section class="p-10">
         <h1 class="text-2xl text-blue-500 text-center mb-2">LOGIN</h1>
         <form @submit.prevent="submit">
             <div class="flex flex-col p-2 justify-start">
@@ -10,7 +10,7 @@
             </div>
             <div class="flex flex-col p-2">
                 <label for="password" class="text-orange-500 font-bold text-xl mb-1">Senha</label>
-                <input type="text" name="password" v-model="password" required autocomplete="off"
+                <input type="password" name="password" v-model="password" required autocomplete="off"
                     placeholder="Digite sua senha..."
                     class="text-white p-2 w-4/5 rounded-2xl border min-w-full border-gray-200">
             </div>
@@ -48,12 +48,18 @@ export default {
             axios.post("http://127.0.0.1:8000/api/login", dados)
                 .then((response) => {
                     console.log("Login feito com sucesso!", response);
-                    this.email = ''
-                    this.password = ''
+                    this.email = '';
+                    this.password = '';
+
+                    const Token = response.data.token;
+
+                    localStorage.setItem('token', Token);
+                    this.$router.push({ path: '/' });
                 })
                 .catch((error) => {
-                    console.log("Ocorreu um erro", error)
-                })
+                    console.log("Ocorreu um erro", error);
+                });
+
         }
     }
 }

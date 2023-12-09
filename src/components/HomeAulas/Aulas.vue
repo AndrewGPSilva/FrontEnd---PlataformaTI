@@ -7,8 +7,8 @@
         </div>
         <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
             <div class="flex w-11/12">
-                <div
-                    :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 10%;`" class="mr-2 cursor-pointer">
+                <div :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 10%;`"
+                    class="mr-2 cursor-pointer">
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
@@ -54,7 +54,8 @@ export default {
     },
     data() {
         return {
-            aulas: []
+            aulas: [],
+            palavra: ''
         }
     },
     methods: {
@@ -83,8 +84,8 @@ export default {
 </script>
 
 <style scoped>
-    #button-delete:hover {
-        background-color: red;
-        color: white;
-    }
+#button-delete:hover {
+    background-color: red;
+    color: white;
+}
 </style>
