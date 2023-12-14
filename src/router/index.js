@@ -34,8 +34,8 @@ const router = createRouter({
       },
     },
     {
-      path: "/:notfound/:notfound?/:notfound?",
-      name: "NotFound",
+      path: "/:qualquercoisa?/:qualquercoisa?/:qualquercoisa?",
+      name: "notFound",
       component: NotFound
     }
   ],
