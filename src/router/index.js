@@ -5,6 +5,7 @@ import Admin from "../views/Admin.vue";
 import Login from "../views/Login.vue";
 import NotFound from "../views/NotFound.vue";
 import Aula from "../views/Aula.vue";
+import AulaCategory from "../views/AulaCategory.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       name: "Aula",
       component: Aula,
       meta: { requiresAuth: true },
+    },
+    {
+      path: '/aulas/category/:category',
+      name: 'AulaCategory',
+      component: AulaCategory
     }
   ],
 });

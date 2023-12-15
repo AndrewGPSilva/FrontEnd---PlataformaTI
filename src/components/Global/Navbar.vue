@@ -10,8 +10,10 @@
                 <router-link to="/aulas">
                     <div id="icons" class="flex flex-wrap p-4">
                         <img class="w-16 h-16" src="https://i.ibb.co/drrxzN9/laravel.png" alt="Logo do Laravel">
-                        <img class="w-16 h-16" src="https://i.ibb.co/Jz5XpmW/python.png" alt="Logo do Python">
-                        <img class="w-16 h-16" src="https://i.ibb.co/HXq4tBM/vue.png" alt="Logo do Vue JS">
+                        <router-link to="/aulas/category/Python"><img class="w-16 h-16"
+                                src="https://i.ibb.co/Jz5XpmW/python.png" alt="Logo do Python"></router-link>
+                        <router-link to="/aulas/category/VueJS"><img class="w-16 h-16"
+                                src="https://i.ibb.co/HXq4tBM/vue.png" alt="Logo do Vue JS"></router-link>
                         <img class="w-16 h-16" src="https://i.ibb.co/f27wdz5/spring.png" alt="Logo do Spring">
                         <img class="w-16 h-16" src="https://i.ibb.co/RpmyqN4/go.png" alt="Logo do Csharp">
                         <img class="w-16 h-16" src="https://i.ibb.co/Yht90fY/tailwind.png" alt="Logo do Tailwind CSS">
