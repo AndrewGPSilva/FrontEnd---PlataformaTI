@@ -17,7 +17,7 @@
                             {{ aula.title }}
                         </h2>
                     </a>
-                    <router-link to="/aula/{{ aula.title }}">
+                    <router-link :to="'/aula/' + aula.id">
                         Ver Aula
                     </router-link>
                     <p class="text-gray-300 mb-1 min-w-full">

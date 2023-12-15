@@ -4,7 +4,7 @@ import HomeAulas from "../views/HomeAulas.vue";
 import Admin from "../views/Admin.vue";
 import Login from "../views/Login.vue";
 import NotFound from "../views/NotFound.vue";
-import AulaId from "../views/AulaId.vue";
+import Aula from "../views/Aula.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,12 +37,14 @@ const router = createRouter({
     {
       path: "/:not?/:not?/:not?/:not?",
       name: "notFound",
-      component: NotFound
+      component: NotFound,
+      meta: { requiresAuth: true },
     },
     {
       path: "/aula/:id",
-      name: "AulaId",
-      component: AulaId
+      name: "Aula",
+      component: Aula,
+      meta: { requiresAuth: true },
     }
   ],
 });
