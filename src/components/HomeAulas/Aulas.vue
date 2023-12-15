@@ -17,6 +17,9 @@
                             {{ aula.title }}
                         </h2>
                     </a>
+                    <router-link to="/aula/{{ aula.title }}">
+                        Ver Aula
+                    </router-link>
                     <p class="text-gray-300 mb-1 min-w-full">
                         {{ limitarDescricao(aula.description, 82) }}
                     </p>

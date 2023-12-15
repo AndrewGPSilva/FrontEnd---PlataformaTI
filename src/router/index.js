@@ -4,6 +4,7 @@ import HomeAulas from "../views/HomeAulas.vue";
 import Admin from "../views/Admin.vue";
 import Login from "../views/Login.vue";
 import NotFound from "../views/NotFound.vue";
+import AulaId from "../views/AulaId.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,9 +35,14 @@ const router = createRouter({
       },
     },
     {
-      path: "/:qualquercoisa?/:qualquercoisa?/:qualquercoisa?",
+      path: "/:not?/:not?/:not?/:not?",
       name: "notFound",
       component: NotFound
+    },
+    {
+      path: "/aula/:id",
+      name: "AulaId",
+      component: AulaId
     }
   ],
 });
