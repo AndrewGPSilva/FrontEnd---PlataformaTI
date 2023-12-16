@@ -17,17 +17,15 @@
                             {{ aula.title }}
                         </h2>
                     </a>
-                    <router-link :to="'/aula/' + aula.id">
-                        Ver Aula
-                    </router-link>
                     <p class="text-gray-300 mb-1 min-w-full">
-                        {{ limitarDescricao(aula.description, 82) }}
+                        <!-- {{ limitarDescricao(aula.description, 100) }} -->
+                        {{ aula.description }}
                     </p>
                     <div class="flex justify-end">
-                        <p
-                            class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold">
-                            Categoria: {{ aula.category }}
-                        </p>
+                        <router-link :to="'/aula/' + aula.id"
+                            class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold ">
+                            Assistir Aula
+                        </router-link>
                     </div>
                 </div>
             </div>
