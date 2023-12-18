@@ -1,27 +1,23 @@
 <template>
-    <section class="flex flex-col py-8 pl-14">
-        <div>
-            <h1 class="text-orange-500 text-center mb-1 underline text-2xl">
+    <section class="flex flex-wrap py-8 pl-14">
+        <!-- <div>
+            <h1 class="text-orange-500 text-center mb-3 underline text-2xl">
                 {{ titulo }}
             </h1>
-        </div>
-        <div v-for="aula in aulas" :key="aula.id" class="flex flex-col m-2 w-5/5">
-            <div class="flex w-11/12">
-                <div :style="`background-image: url(${aula.image}); height: 120px; background-size: cover; border-radius: 10%;`"
+        </div> -->
+        <div v-for="aula in aulas" :key="aula.id" class="flex m-2 w-5/5">
+            <div class="flex flex-col p-4 w-11/12">
+                <div :style="`background-image: url(${aula.image}); height: 250px; width: 430px; background-size: cover; border-radius: 10%;`"
                     class="mr-2 cursor-pointer">
                     <div class="w-56"></div>
                 </div>
                 <div class="flex flex-col mt-2">
-                    <a :href="aula.link" target="_blank">
+                    <!-- <a :href="aula.link" target="_blank">
                         <h2 class="text-blue-500">
                             {{ aula.title }}
                         </h2>
-                    </a>
-                    <p class="text-gray-300 mb-1 min-w-full">
-                        <!-- {{ limitarDescricao(aula.description, 100) }} -->
-                        {{ aula.description }}
-                    </p>
-                    <div class="flex justify-end">
+                    </a> -->
+                    <div class="flex justify-center">
                         <router-link :to="'/aula/' + aula.id"
                             class="bg-blue-500 p-1 cursor-pointer rounded-lg text-black text-center items-center w-52 font-bold ">
                             Assistir Aula
@@ -29,7 +25,6 @@
                     </div>
                 </div>
             </div>
-            <Line />
         </div>
     </section>
 </template>
@@ -70,13 +65,6 @@ export default {
                     .catch(error => {
                         console.error(error);
                     });
-            }
-        },
-        limitarDescricao(descricao, limite) {
-            if (descricao.length > limite) {
-                return descricao.substring(0, limite) + "...";
-            } else {
-                return descricao;
             }
         }
     },

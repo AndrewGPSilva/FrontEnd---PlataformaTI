@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Global/Navbar.vue'
-import AulaPorId from '../components/Aula/AulaPorId.vue';
+import Navbar from '@!/Global/Navbar.vue'
+import AulaPorId from '@!/Aula/AulaPorId.vue';
 export default {
     name: "Aula",
     components: {
