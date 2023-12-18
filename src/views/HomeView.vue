@@ -1,6 +1,6 @@
 <script setup>
 import Navbar from "@!/Global/Navbar.vue"
-import Banner from "@!/Create/Banner.vue"
+import Banner from "@!/Home/Banner.vue"
 import Card from "@!/Home/Card.vue";
 </script>
 

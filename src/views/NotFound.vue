@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1>Página não encontrada!</h1>
+        <h1 class="pt-60">Página não encontrada!</h1>
     </section>
 </template>
 
