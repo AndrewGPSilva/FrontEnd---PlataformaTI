@@ -1,15 +1,9 @@
 <template>
     <section class="flex flex-wrap py-8 pl-14">
-        <!-- <div>
-            <h1 class="text-orange-500 text-center mb-3 underline text-2xl">
-                {{ titulo }}
-            </h1>
-        </div> -->
         <div v-for="aula in aulas" :key="aula.id" class="flex m-2 w-5/5">
             <div class="flex flex-col p-4 w-11/12">
-                <div :style="`background-image: url(${aula.image}); height: 250px; width: 430px; background-size: cover; border-radius: 10%;`"
-                    class="mr-2 cursor-pointer">
-                    <div class="w-56"></div>
+                <div class="mr-1">
+                    <img style="height: 250px; width: auto;" :src="aula.image" alt="Imagem da Aula">
                 </div>
                 <div class="flex flex-col mt-2">
                     <!-- <a :href="aula.link" target="_blank">
