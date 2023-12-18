@@ -1,5 +1,5 @@
 <template>
-    <section class="flex p-20">
+    <section class="flex">
       <div v-if="aula">
         <iframe :src="aula.original.link" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -35,5 +35,11 @@
   </script>
   
   <style scoped>
+    iframe {
+      width: 78vw;
+      height: 93vh;
+      border: 2px solid green;
+      border-radius: 10px;
+    }
   </style>
   
