@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Formulario from '../components/Home/Formulario.vue';
+import Formulario from '../components/Autenticacao/Formulario.vue';
 export default {
   name: "Login",
   components: {
