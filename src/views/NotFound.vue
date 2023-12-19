@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1 class="pt-60">Página não encontrada!</h1>
+        
     </section>
 </template>
 
@@ -11,9 +11,10 @@ export default {
 </script>
 
 <style scoped>
-    h1 {
-        text-align: center;
-        font-size: xx-large;
-        color: red;
+    section {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('../assets/404.jpg');
+        background-size: auto;
     }
 </style>

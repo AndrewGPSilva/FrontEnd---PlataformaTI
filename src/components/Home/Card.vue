@@ -26,7 +26,7 @@ export default {
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h2 {
